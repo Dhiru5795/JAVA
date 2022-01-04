@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:p="http://www.springframework.org/schema/p"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+   
+   
+   <!-- This is our Student Bean Value used as Setter Property-->
+   <bean class="com.springcore.Student" name="student1">
+   	<property name="studentId" >
+   	<value>22344</value>
+   </property>
+   	<property name="studentName">
+   	<value>Dhirender Yadav</value>
+   	</property>
+   	<property name="studentAddress">
+   	<value>Kanpur</value>
+   	</property>
+   </bean>
+   
+    <!-- This is our 2nd Student Bean  Value used as Attribute Property-->
+   <bean class="com.springcore.Student" name="student2">
+   	<property name="studentId" value="143" />
+   
+   	<property name="studentName" value="Pooja Yadav" />
+   	
+   	<property name="studentAddress" value="Banaras" />
+   	
+   </bean>
+   
+    <!-- This is our 3rd Student Bean  Value used as P Property given in above xml in line 5-->
+   <bean class="com.springcore.Student" name="student3" p:studentId="1234" p:studentName="Hanuman" p:studentAddress="Ayodhya" />
+   
+   
+    </beans>
